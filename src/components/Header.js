@@ -1,22 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-const Header = ({ toggleDrawer, isOpen }) => {
+const Header = ({ close }) => {
   return (
-    <>
-      {!isOpen ? (
-        <ion-icon
-          name="menu-outline"
-          size="large"
-          onClick={toggleDrawer}
-        ></ion-icon>
-      ) : (
-        <ion-icon
-          name="close-outline"
-          size="large"
-          onClick={toggleDrawer}
-        ></ion-icon>
-      )}
-    </>
+    <NavLink to="/" onClick={close}>
+      <ion-icon name="home" size="large" />
+    </NavLink>
   );
 };
 
