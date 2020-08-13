@@ -33,17 +33,18 @@ const IconContainer = styled.section`
 
     padding: 0.8rem;
 
-    ion-icon {
+    a > ion-icon[name='home'] {
+      margin: 0;
+    }
+
+    ion-icon,
+    a {
       margin: 1rem auto;
       color: ${(props) => props.theme.colors.rum};
-
-      &:first-of-type {
-        margin-bottom: 0rem;
-      }
     }
+  }
 
-    ion-icon:first-of-type {
-      margin-bottom: 2rem;
-    }
+  a:first-of-type {
+    margin-bottom: 2rem;
   }
 `;
