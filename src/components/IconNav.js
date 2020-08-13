@@ -6,7 +6,7 @@ import { Header } from './';
 const IconNav = ({ toggleDrawer, isOpen, close }) => {
   return (
     <Container>
-      <Header toggleDrawer={toggleDrawer} isOpen={isOpen} />
+      <Header close={close} />
       <ion-icon name="clipboard-outline" size="large" onClick={toggleDrawer} />
       <ion-icon name="person-outline" size="large" onClick={toggleDrawer} />
       <ion-icon name="people-outline" size="large" onClick={toggleDrawer} />
