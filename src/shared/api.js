@@ -2,7 +2,7 @@ import axios from 'axios';
 import Cookies from 'universal-cookie';
 
 import { year, createSlug } from '../utils/helpers';
-import { SERVER_DEV, SERVER } from './uri';
+import { SERVER_DEV } from './uri';
 
 export const api = axios.create({
   baseURL: SERVER_DEV
