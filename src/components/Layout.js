@@ -13,7 +13,7 @@ const Layout = ({ children, links }) => {
 
   return (
     <>
-      {!auth.isOnline && (
+      {auth.isOnline && (
         <>
           <IconNav
             toggleDrawer={toggleDrawer}
@@ -27,14 +27,14 @@ const Layout = ({ children, links }) => {
           )}
         </>
       )}
-      {isOpen && <Backdrop close={closeDrawer} />}
       <Content>{children}</Content>
     </>
   );
 };
 
-const Content = styled.section`
+const Content = styled.main`
   width: 80%;
+  min-height: 50%;
   display: flex;
   flex-direction: column;
 

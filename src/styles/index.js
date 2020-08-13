@@ -6,3 +6,4 @@ export { Form } from './Form';
 export { Wrapper, Label, Input } from './Input';
 export { Backdrop } from './Backdrop';
 export { Links } from './Links';
+export { DefaultButton } from './DefaultButton';

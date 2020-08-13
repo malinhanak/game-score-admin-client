@@ -4,9 +4,9 @@ export const theme = {
     accent: '#05eaf7',
     rum: '#776d8a',
     white: '#ffffff',
-    wildSand: '#f5f5f5',
-    mineShaft: '#343434',
-    jetStream: '#b9d2d2',
+    geyser: '#dbe3e5',
+    milanoRead: '#c90606',
+    gray: '#8f8d8d',
     disabled: 'lightgrey',
     backdrop: 'rgba(52, 52, 52, 0.7)'
   }

@@ -9,7 +9,8 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background-color: ${(props) => props.theme.colors.main}
+    background-color: ${(props) => props.theme.colors.main};
+    min-height: 100vh;
   }
 
   html {
@@ -28,8 +29,13 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
   }
 
-  main#root {
-    margin-top: 80px;
+  #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    height: 100vh;
   }
 
   .main-navigation__drawer-nav {

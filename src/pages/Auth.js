@@ -2,20 +2,25 @@ import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { Input } from '../components';
-import { Form } from '../styles/Form';
+import { Form, DefaultButton } from '../styles';
 import { emailPattern } from '../utils/helpers';
 import { authContext } from '../shared/providers/auth-context';
 
-const Auth = () => {
+const Auth = ({ history }) => {
   const auth = useContext(authContext);
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit, watch, errors } = useForm({
+    mode: 'onChange'
+  });
   // handleSubmit(
   //   auth.login(e, history, { name: team, password: password })
   // )
 
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log('input values', watch().username);
+    auth.login(history, {
+      username: watch().username,
+      password: watch().password
+    });
   };
 
   return (
@@ -32,7 +37,17 @@ const Auth = () => {
         })}
         error={errors.username}
       />
-      <button type="submit">Logga in</button>
+
+      <Input
+        name="password"
+        type="password"
+        label="Lösenord"
+        ref={register({
+          required: true
+        })}
+        error={errors.password}
+      />
+      <DefaultButton type="submit">Logga in</DefaultButton>
     </Form>
   );
 };

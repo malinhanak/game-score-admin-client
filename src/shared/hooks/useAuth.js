@@ -10,9 +10,7 @@ export const useAuth = () => {
   const [sid, setSid] = useState(cookies?.sid);
   const [isOnline, setIsOnline] = useState(cookies.sid ? true : false);
 
-  const login = async (event, redirect, credentials) => {
-    event.preventDefault();
-
+  const login = async (redirect, credentials) => {
     try {
       const response = await api.post(LOGIN, { ...credentials });
       const admin = response.data;

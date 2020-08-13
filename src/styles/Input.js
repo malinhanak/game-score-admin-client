@@ -1,5 +1,15 @@
 import styled from 'styled-components';
 
+export const ErrorWrapper = styled.section`
+  display: flex;
+
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  margin: 1rem auto 2rem auto;
+`;
+
 export const Wrapper = styled.section`
   display: flex;
   position: relative;
@@ -8,24 +18,16 @@ export const Wrapper = styled.section`
   align-items: flex-start;
 
   width: 100%;
-  margin: 1rem auto;
-
-  &:first-of-type {
-    margin: 1rem auto 0 auto;
-  }
-
-  & > required {
-    color: red;
-  }
 `;
 
 export const Input = styled.input`
   padding: 0.5rem;
   width: 100%;
   border: none;
-  border-bottom: 3px solid ${(props) => props.theme.colors.mineShaft};
+  background-color: transparent;
+  border-bottom: 3px solid ${(props) => props.theme.colors.geyser};
 
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: ${(props) => props.theme.colors.mineShaft};
 
   &:focus {
@@ -38,7 +40,7 @@ export const Input = styled.input`
     left: 50%;
     width: 0;
     height: 3px;
-    background-color: ${(props) => props.theme.colors.accent};
+    background-color: ${(props) => props.theme.colors.rum};
     transition: 0.4s;
   }
 
@@ -54,7 +56,14 @@ export const Input = styled.input`
 `;
 
 export const Label = styled.label`
+  font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
-  font-size: 0.7rem;
-  /* TODO: Set color */
+  font-size: 0.6rem;
+  font-weight: 700;
+
+  color: ${(props) => props.theme.colors.rum};
+
+  & > required {
+    color: ${(props) => props.theme.colors.milanoRed};
+  }
 `;
