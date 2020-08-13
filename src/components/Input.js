@@ -2,7 +2,7 @@ import React from 'react';
 import { InputErrors } from '../utils/InputErrors';
 import { Wrapper, Label, Input as InputStyles } from '../styles/Input';
 
-export const Input = React.forwardRef((props, ref) => {
+const Input = React.forwardRef((props, ref) => {
   const { label, error, name } = props;
   return (
     <Wrapper>
@@ -17,3 +17,5 @@ export const Input = React.forwardRef((props, ref) => {
     </Wrapper>
   );
 });
+
+export default Input;

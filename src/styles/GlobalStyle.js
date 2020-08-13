@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+    background-color: ${(props) => props.theme.colors.main}
   }
 
   html {
@@ -27,38 +28,9 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
   }
 
-  header#header-hook {
-    position: fixed;
-    z-index: 15;
-    top: 0;
-    left: 0;
-
-    max-height: 96px;
-    width: 100%;
-  }
-
-  footer#footer-hook {
-    position: fixed;
-    z-index: 15;
-    bottom: 0;
-    left: 0;
-
-    height: 96px;
-    max-height: 96px;
-    width: 100%;
-
-    background-color: ${(props) => props.theme.colors.mosque};
-    color: ${(props) => props.theme.colors.jetStream};
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   main#root {
     margin-top: 80px;
   }
-
 
   .main-navigation__drawer-nav {
     height: 100%;

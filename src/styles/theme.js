@@ -1,8 +1,9 @@
 export const theme = {
   colors: {
-    main: '#eeeeee',
+    main: '#f0f0f0',
     accent: '#05eaf7',
-    mosque: '#055e68',
+    rum: '776d8a',
+    white: '#ffffff',
     wildSand: '#f5f5f5',
     mineShaft: '#343434',
     jetStream: '#b9d2d2',
