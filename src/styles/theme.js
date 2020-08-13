@@ -2,7 +2,7 @@ export const theme = {
   colors: {
     main: '#f0f0f0',
     accent: '#05eaf7',
-    rum: '776d8a',
+    rum: '#776d8a',
     white: '#ffffff',
     wildSand: '#f5f5f5',
     mineShaft: '#343434',
