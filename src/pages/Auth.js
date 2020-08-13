@@ -11,9 +11,6 @@ const Auth = ({ history }) => {
   const { register, handleSubmit, watch, errors } = useForm({
     mode: 'onChange'
   });
-  // handleSubmit(
-  //   auth.login(e, history, { name: team, password: password })
-  // )
 
   const onSubmit = (event) => {
     event.preventDefault();
