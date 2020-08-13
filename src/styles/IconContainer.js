@@ -13,7 +13,7 @@ const IconContainer = styled.section`
   position: fixed;
   top: 3rem;
   left: 1rem;
-  z-index: 25;
+  z-index: 40;
 
   width: 65px;
   height: 60vh;
