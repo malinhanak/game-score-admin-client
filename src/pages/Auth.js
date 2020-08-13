@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { Input } from '../components/Input';
+import { Input } from '../components';
 import { Form } from '../styles/Form';
 import { emailPattern } from '../utils/helpers';
 import { authContext } from '../shared/providers/auth-context';
