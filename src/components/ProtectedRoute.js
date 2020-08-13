@@ -9,7 +9,7 @@ export const ProtectedRoute = ({ component: Component, ...rest }) => {
     <Route
       {...rest}
       render={(props) => {
-        if (cookies.sid.isOnline) {
+        if (cookies.sid && cookies.sid.isOnline) {
           return <Component {...props} />;
         } else {
           return (
