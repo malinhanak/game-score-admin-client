@@ -5,21 +5,23 @@ import { CookiesProvider } from 'react-cookie';
 import { ThemeProvider } from 'styled-components';
 
 import * as serviceWorker from './serviceWorker';
-import { AuthProvider } from './shared/providers';
+import { AuthProvider, ContentProvider } from './shared/providers';
 import { GlobalStyle, theme } from './styles';
 import App from './App';
 
 ReactDOM.render(
   <CookiesProvider>
     <AuthProvider>
-      <React.StrictMode>
-        <ThemeProvider theme={theme}>
-          <BrowserRouter>
-            <GlobalStyle />
-            <App />
-          </BrowserRouter>
-        </ThemeProvider>
-      </React.StrictMode>
+      <ContentProvider>
+        <React.StrictMode>
+          <ThemeProvider theme={theme}>
+            <BrowserRouter>
+              <GlobalStyle />
+              <App />
+            </BrowserRouter>
+          </ThemeProvider>
+        </React.StrictMode>
+      </ContentProvider>
     </AuthProvider>
   </CookiesProvider>,
   document.getElementById('root')
