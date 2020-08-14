@@ -4,7 +4,12 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Drawer } from '../styles';
 
-const SideDrawer = ({ close, isOpen, children }) => {
+const SideDrawer = ({ close, isOpen, children, setLinkId }) => {
+  const closeSidedrawer = () => {
+    setLinkId('');
+    close();
+  };
+
   const drawer = (
     <CSSTransition
       in={isOpen}
@@ -14,7 +19,11 @@ const SideDrawer = ({ close, isOpen, children }) => {
       unmountOnExit
     >
       <Drawer>
-        <ion-icon name="close-outline" onClick={close}></ion-icon>
+        <ion-icon
+          name="close-outline"
+          size="small"
+          onClick={closeSidedrawer}
+        ></ion-icon>
         {children}
       </Drawer>
     </CSSTransition>

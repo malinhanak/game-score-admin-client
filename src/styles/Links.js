@@ -7,4 +7,20 @@ export const Links = styled.nav`
   align-items: flex-start;
 
   padding: 1rem 1rem;
+
+  a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    color: ${(props) => props.theme.colors.rum};
+
+    margin: 1rem 0 0 0;
+  }
+
+  a.active {
+    color: ${(props) => props.theme.colors.tradeWind};
+  }
 `;

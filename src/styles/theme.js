@@ -7,6 +7,7 @@ export const theme = {
     geyser: '#dbe3e5',
     milanoRead: '#c90606',
     gray: '#8f8d8d',
+    tradeWind: '#68b0ab',
     disabled: 'lightgrey',
     backdrop: 'rgba(52, 52, 52, 0.7)'
   }
