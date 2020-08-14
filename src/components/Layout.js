@@ -49,7 +49,7 @@ const Layout = ({ children, links }) => {
 };
 
 const Content = styled.main`
-  width: 80%;
+  width: 70%;
   min-height: 50%;
   display: flex;
   flex-direction: column;
