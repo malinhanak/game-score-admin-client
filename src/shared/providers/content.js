@@ -3,16 +3,19 @@ import React, { useReducer } from 'react';
 export const SET_SCORES = 'SET_SCORES';
 export const SET_TEAMS = 'SET_TEAMS';
 export const SET_ERROR = 'SET_ERROR';
+export const SET_ADMINS = 'SET_ADMINS';
 
 export const CLEAR_TEAMS = 'CLEAR_TEAMS';
 export const CLEAR_SCORES = 'CLEAR_SCORES';
 export const CLEAR_ERROR = 'CLEAR_ERROR';
+export const CLEAR_ADMINS = 'CLEAR_ADMINS';
 
 export const Store = React.createContext();
 
 const initialState = {
   scores: null,
   teams: null,
+  admins: null,
   error: null
 };
 
@@ -24,6 +27,10 @@ function reducer(state, action) {
       return { ...state, error: action.payload };
     case SET_TEAMS:
       return { ...state, teams: action.payload };
+    case SET_ADMINS:
+      return { ...state, admins: action.payload };
+    case CLEAR_ADMINS:
+      return { ...state, admins: null };
     case CLEAR_SCORES:
       return { ...state, scores: null };
     case CLEAR_TEAMS:
