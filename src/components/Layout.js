@@ -55,6 +55,10 @@ const Content = styled.main`
   flex-direction: column;
 
   margin: auto;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const Wrapper = styled.div``;
