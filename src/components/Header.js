@@ -1,12 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
-const Header = ({ close }) => {
-  return (
-    <NavLink to="/" onClick={close}>
-      <ion-icon name="home" size="large" />
-    </NavLink>
-  );
+const Header = ({ close, history }) => {
+  const NavigateAndClose = () => {
+    history.push('/');
+    close();
+  };
+
+  return <ion-icon name="home" size="large" onClick={NavigateAndClose} />;
 };
 
-export default Header;
+export default withRouter(Header);
