@@ -28,11 +28,11 @@ export const Drawer = styled.aside`
 
   @media screen and (max-width: 768px) {
     top: auto;
-    left: 11%;
-    bottom: 3rem;
+    left: 10%;
+    bottom: 6rem;
 
-    height: 40vh;
-    width: 90%;
+    height: 30vh;
+    width: 80%;
     max-width: 300px;
 
     border-radius: 10px 10px 0 0;

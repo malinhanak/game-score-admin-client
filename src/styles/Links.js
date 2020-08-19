@@ -18,6 +18,10 @@ export const Links = styled.nav`
     color: ${(props) => props.theme.colors.rum};
 
     margin: 1rem 0 0 0;
+
+    :first-of-type {
+      margin-top: 0;
+    }
   }
 
   a.active {

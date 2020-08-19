@@ -18,6 +18,7 @@ const Styles = styled.section`
 
   grid-row: ${(props) => props.row};
   grid-column: ${(props) => props.col};
+  grid-area: ${(props) => props.area};
 
   display: flex;
   flex-direction: row;
@@ -28,6 +29,10 @@ const Styles = styled.section`
 
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.rum};
+
+  @media screen and (max-width: 768px) {
+    padding: 0 0 0 0;
+  }
 
   section {
     display: flex;

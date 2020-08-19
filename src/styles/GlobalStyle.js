@@ -36,6 +36,10 @@ export const GlobalStyle = createGlobalStyle`
     align-items: flex-start;
 
     height: 100vh;
+
+    @media screen and (max-width: 768px) {
+      justify-content: flex-start;
+  }
   }
 
   .main-navigation__drawer-nav {

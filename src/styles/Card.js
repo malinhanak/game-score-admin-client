@@ -18,4 +18,5 @@ const Styled = styled.section`
   display: grid;
   grid-row: ${(props) => props.row};
   grid-column: ${(props) => props.col};
+  grid-area: ${(props) => props.area};
 `;

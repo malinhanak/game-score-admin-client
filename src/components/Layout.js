@@ -58,6 +58,7 @@ const Content = styled.main`
 
   @media screen and (max-width: 768px) {
     width: 90%;
+    margin: 2rem auto 0 auto;
   }
 `;
 
