@@ -2,11 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { cardStyle } from './cardStyle';
+import Typography from '../components/Typography';
 
 export const Card = ({ classname, row, col, title, children }) => {
   return (
     <Styled className={classname} row={row} col={col}>
-      <h3>{title}</h3>
+      <Typography variant="h3">{title}</Typography>
       {children}
     </Styled>
   );
