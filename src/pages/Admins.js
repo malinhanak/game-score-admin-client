@@ -22,8 +22,12 @@ const Admins = () => {
       <AdminCard title={admin.name} key={admin.name}>
         <Avatar name={admin.name} index={index} />
         <section className="admins-content">
-          <Typography variant="h3">Tävlingsledare</Typography>
-          <Typography variant="p">{admin.username}</Typography>
+          <Typography variant="h3" classname="level-3" mb="0">
+            Tävlingsledare
+          </Typography>
+          <Typography variant="p" classname="paragraph">
+            {admin.username}
+          </Typography>
         </section>
       </AdminCard>
     );
@@ -42,7 +46,9 @@ const Admins = () => {
 
   return (
     <Wrapper>
-      <Typography variant="h2">Administratörer</Typography>
+      <Typography variant="h2" classname="level-2">
+        Administratörer
+      </Typography>
       <section className="admins">{displayAdmins}</section>
     </Wrapper>
   );
@@ -66,7 +72,7 @@ const AdminCard = styled.section`
   justify-content: space-between;
   align-items: flex-start;
 
-  width: 100%;
+  flex: 1 48%;
   margin: 1rem 0;
 
   section.admins-content {
@@ -74,11 +80,11 @@ const AdminCard = styled.section`
   }
 
   @media screen and (min-width: 768px) {
-    width: 35%;
-    max-width: 276px;
+    margin: 0 0 1rem 0;
 
-    margin: 1rem 1rem;
-
+    :nth-child(even) {
+      margin-left: 1rem;
+    }
     :last-of-type {
       margin-right: auto;
     }

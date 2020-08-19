@@ -7,7 +7,9 @@ import Typography from '../components/Typography';
 export const Card = ({ classname, row, col, title, children }) => {
   return (
     <Styled className={classname} row={row} col={col}>
-      <Typography variant="h3">{title}</Typography>
+      <Typography variant="h3" classname="level-3">
+        {title}
+      </Typography>
       {children}
     </Styled>
   );

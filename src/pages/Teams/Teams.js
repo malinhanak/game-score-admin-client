@@ -19,8 +19,12 @@ const Teams = () => {
   const displayAdmins = teams?.teams.map((team) => {
     return (
       <TeamCard key={team.name}>
-        <Typography variant="h3">{team.name}</Typography>
-        <Typography variant="p">{team.members.join(', ')}</Typography>
+        <Typography variant="h3" classname="level-3">
+          {team.name}
+        </Typography>
+        <Typography variant="p" classname="paragraph">
+          {team.members.join(', ')}
+        </Typography>
       </TeamCard>
     );
   });
@@ -38,7 +42,9 @@ const Teams = () => {
 
   return (
     <Wrapper>
-      <Typography variant="h2">Tävlingslag</Typography>
+      <Typography variant="h2" classname="level-2">
+        Tävlingslag
+      </Typography>
       <section className="teams">{displayAdmins}</section>
     </Wrapper>
   );
@@ -62,14 +68,18 @@ const TeamCard = styled.section`
   justify-content: center;
   align-items: flex-start;
 
-  width: 100%;
+  flex: 1 48%;
   margin: 1rem 0;
 
   @media screen and (min-width: 768px) {
-    width: 35%;
-    max-width: 276px;
+    /* width: 46%;
+    max-width: 348px; */
 
-    margin: 1rem 1rem;
+    margin: 0 0 1rem 0;
+
+    :nth-child(even) {
+      margin-left: 1rem;
+    }
 
     :last-of-type {
       margin-right: auto;
