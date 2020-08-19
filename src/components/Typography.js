@@ -1,16 +1,18 @@
 import React from 'react';
-import { TextStyles } from '../styles/TextStyles';
+import PropTypes from 'prop-types';
+import { Styles } from '../styles/TextStyles';
 
-const Typography = ({ classname, variant, children }, props) => {
-  const getElement = (variant, children, props) => {
-    return React.createElement(variant || 'p', props, children);
-  };
-
+const Typography = ({ classname, variant, children, ...props }) => {
   return (
-    <TextStyles className={classname} {...props}>
-      {getElement(variant, children, props)}
-    </TextStyles>
+    <Styles className={classname} as={variant} {...props}>
+      {children}
+    </Styles>
   );
+};
+
+Typography.propTypes = {
+  classname: PropTypes.string,
+  as: PropTypes.string
 };
 
 export default Typography;

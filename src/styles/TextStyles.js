@@ -1,30 +1,39 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const TextStyles = styled.article`
-  h1,
-  h2,
-  h3 {
-    margin: 0;
-    padding: 0;
-    margin-bottom: ${(props) => props.mb || '0.5rem'};
+const common = css`
+  margin: 0;
+  padding: 0;
 
-    color: ${(props) => props.theme.colors.rum};
+  color: ${(props) => props.theme.colors.rum};
+`;
+
+export const Styles = styled.h1`
+  ${common}
+
+  &.level-1 {
     text-transform: uppercase;
-  }
-  h1 {
     font-size: 2.35rem;
+    margin-bottom: ${(props) => (props.mb ? props.mb : '0.5rem')};
   }
-  h2 {
+
+  &.level-2 {
+    text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
-  }
-  h3 {
-    opacity: 0.4;
-    font-size: 0.7rem;
+
+    margin-bottom: ${(props) => (props.mb ? props.mb : '0.5rem')};
   }
 
-  p {
+  &.level-3 {
+    text-transform: uppercase;
+    opacity: 0.4;
+    font-size: 0.7rem;
+
+    margin-bottom: ${(props) => (props.mb ? props.mb : '0.5rem')};
+  }
+
+  &.paragraph {
     margin-top: 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 0.8rem;
