@@ -4,7 +4,8 @@ import {
   ErrorWrapper,
   Wrapper,
   Label,
-  Input as InputStyles
+  Input as InputStyles,
+  Required
 } from '../styles/Input';
 
 const Input = React.forwardRef((props, ref) => {
@@ -15,7 +16,7 @@ const Input = React.forwardRef((props, ref) => {
         {label && (
           <Label htmlFor={name}>
             {label}{' '}
-            {error && error.type === 'required' && <required>*</required>}
+            {error && error.type === 'required' && <Required>*</Required>}
           </Label>
         )}
         <InputStyles className={error && 'error'} ref={ref} {...props} />

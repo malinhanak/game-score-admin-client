@@ -56,14 +56,16 @@ export const Input = styled.input`
 `;
 
 export const Label = styled.label`
+  display: flex;
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   font-size: 0.6rem;
   font-weight: 700;
 
   color: ${(props) => props.theme.colors.rum};
+`;
 
-  & > required {
-    color: ${(props) => props.theme.colors.milanoRed};
-  }
+export const Required = styled.div`
+  margin-left: 0.3rem;
+  color: ${(props) => props.theme.colors.milanoRed};
 `;
