@@ -26,15 +26,16 @@ const IconContainer = styled.section`
   box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.19);
 
   @media screen and (max-width: 768px) {
+    top: auto;
     bottom: 3rem;
-    width: 90vw;
+    width: 90%;
     height: 65px;
   }
 
   nav {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
 
     padding: 0.8rem;
@@ -42,10 +43,6 @@ const IconContainer = styled.section`
     ion-icon {
       margin: 1rem auto;
       color: ${(props) => props.theme.colors.rum};
-    }
-
-    ion-icon[name='home'] {
-      margin: auto 0 auto 1rem;
     }
 
     @media screen and (max-width: 768px) {
