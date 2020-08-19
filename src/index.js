@@ -5,7 +5,11 @@ import { CookiesProvider } from 'react-cookie';
 import { ThemeProvider } from 'styled-components';
 
 import * as serviceWorker from './serviceWorker';
-import { AuthProvider, ContentProvider } from './shared/providers';
+import {
+  AuthProvider,
+  ContentProvider,
+  StoreProvider
+} from './shared/providers';
 import { GlobalStyle, theme } from './styles';
 import App from './App';
 
@@ -13,14 +17,16 @@ ReactDOM.render(
   <CookiesProvider>
     <AuthProvider>
       <ContentProvider>
-        <React.StrictMode>
-          <ThemeProvider theme={theme}>
-            <BrowserRouter>
-              <GlobalStyle />
-              <App />
-            </BrowserRouter>
-          </ThemeProvider>
-        </React.StrictMode>
+        <StoreProvider>
+          <React.StrictMode>
+            <ThemeProvider theme={theme}>
+              <BrowserRouter>
+                <GlobalStyle />
+                <App />
+              </BrowserRouter>
+            </ThemeProvider>
+          </React.StrictMode>
+        </StoreProvider>
       </ContentProvider>
     </AuthProvider>
   </CookiesProvider>,
