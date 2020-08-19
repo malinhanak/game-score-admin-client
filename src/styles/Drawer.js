@@ -21,8 +21,20 @@ export const Drawer = styled.aside`
   flex-direction: column;
 
   ion-icon {
-    margin: 1rem 1rem 1rem auto;
+    margin: 1rem 1rem 0 auto;
     font-size: 2rem;
     color: ${(props) => props.theme.colors.rum};
+  }
+
+  @media screen and (max-width: 768px) {
+    top: auto;
+    left: 11%;
+    bottom: 3rem;
+
+    height: 40vh;
+    width: 90%;
+    max-width: 300px;
+
+    border-radius: 10px 10px 0 0;
   }
 `;

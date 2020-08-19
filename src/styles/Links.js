@@ -6,7 +6,7 @@ export const Links = styled.nav`
   justify-content: center;
   align-items: flex-start;
 
-  padding: 1rem 1rem;
+  padding: 0 1rem 1rem 1rem;
 
   a {
     text-decoration: none;
