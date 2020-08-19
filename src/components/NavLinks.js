@@ -26,16 +26,16 @@ const NavLinks = ({ close, linkId, setLinkId }) => {
       case 'team':
         return (
           <>
-            <NavLink to={`/base-score`} onClick={clearLinks}>
+            <NavLink to={`/teams`} onClick={clearLinks}>
               Registrerade Lag
             </NavLink>
             <NavLink to={`/add-team`} onClick={clearLinks}>
               Lägg till team
             </NavLink>
-            <NavLink to={`/base-score`} onClick={clearLinks}>
+            <NavLink to={`/add-base-score`} onClick={clearLinks}>
               Skapa start poäng
             </NavLink>
-            <NavLink to={`/base-score`} onClick={clearLinks}>
+            <NavLink to={`/add-points`} onClick={clearLinks}>
               Registrera poäng
             </NavLink>
           </>
